@@ -52,3 +52,58 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const colors = ["#FF5733", "#33FF57", "#3357FF", "#F1C40F", "#9B59B6", "#E74C3C", "#1ABC9C"];
+    let selectedColor = "#000000"; // Default color
+
+    const colorPalette = document.getElementById("colorPalette");
+    colors.forEach(color => {
+        const colorDiv = document.createElement("div");
+        colorDiv.className = "colorOption";
+        colorDiv.style.backgroundColor = color;
+        colorDiv.addEventListener("click", () => {
+            selectedColor = color;
+        });
+        colorPalette.appendChild(colorDiv);
+    });
+
+    const canvas = document.getElementById("mandalaCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Simple mandala drawing example (a circle with multiple arcs)
+    function drawMandala() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.lineWidth = 2;
+
+        for (let i = 0; i < 12; i++) {
+            ctx.beginPath();
+            ctx.arc(250, 250, 200, (i * Math.PI) / 6, ((i + 1) * Math.PI) / 6);
+            ctx.lineTo(250, 250);
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        for (let i = 0; i < 6; i++) {
+            ctx.beginPath();
+            ctx.arc(250, 250, 100, (i * Math.PI) / 3, ((i + 1) * Math.PI) / 3);
+            ctx.lineTo(250, 250);
+            ctx.closePath();
+            ctx.stroke();
+        }
+    }
+
+    drawMandala();
+
+    canvas.addEventListener("click", function(event) {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        ctx.fillStyle = selectedColor;
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, 2 * Math.PI);
+        ctx.fill();
+    });
+});

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-				<title>Ayuda Contra la Ansiedad</title>
+        <title>Ayuda Contra la Ansiedad</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -14,6 +14,25 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* Estilos para la sección del juego de mandalas */
+            #colorPalette {
+                display: flex;
+                justify-content: center;
+                margin: 20px;
+            }
+            .colorOption {
+                width: 30px;
+                height: 30px;
+                margin: 0 5px;
+                cursor: pointer;
+            }
+            #mandalaCanvas {
+                border: 1px solid #000;
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -29,6 +48,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">Ejercicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Video</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Explicacion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#mandala">Mandala</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,22 +66,24 @@
             </div>
         </header>
         <!-- About-->
-<!-- About -->
-<section class="about-section text-center" id="about">
-    <div class="container-fluid px-0">
-        <!-- Embed YouTube video -->
-        <div class="embed-responsive embed-responsive-16by9">
-        
-	<iframe width="1000" height="500" src="https://www.youtube.com/embed/hqJZR4d80Do?si=Gpl1mtjTUMF2Evw-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-    </div>
-</section>
-<!-- Projects -->
-
-<!-- Projects-->
+        <section class="about-section text-center" id="about">
+            <div class="container-fluid px-0">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/hqJZR4d80Do?si=Gpl1mtjTUMF2Evw-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+                <!-- Mandala Section -->
+                <section class="mandala-section text-center" id="mandala">
+                    <div class="container px-4 px-lg-5">
+                        <h2 class="mb-4">Colorea el Mandala</h2>
+                        <div id="colorPalette"></div>
+                        <canvas id="mandalaCanvas" width="500" height="500"></canvas>
+                    </div>
+                </section>
+        <!-- Projects-->
         <section class="projects-section bg-light" id="projects">
             <div class="container px-4 px-lg-5">
-                <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
@@ -71,7 +93,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="..." /></div>
                     <div class="col-lg-6">
@@ -85,7 +106,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project Two Row-->
                 <div class="row gx-0 justify-content-center">
                     <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="..." /></div>
                     <div class="col-lg-6 order-lg-first">
@@ -101,6 +121,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Signup-->
         <section class="signup-section" id="signup">
             <div class="container px-4 px-lg-5">
@@ -108,25 +129,13 @@
                     <div class="col-md-10 col-lg-8 mx-auto text-center">
                         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
                         <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
                         <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Email address input-->
                             <div class="row input-group-newsletter">
                                 <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
                                 <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
                             </div>
                             <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
                             <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3 mt-2 text-white">
                                     <div class="fw-bolder">Form submission successful!</div>
@@ -135,10 +144,6 @@
                                     <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                 </div>
                             </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
                         </form>
                     </div>
@@ -198,5 +203,8 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <!-- Mandala Coloring Game Script -->
+        
     </body>
 </html>
