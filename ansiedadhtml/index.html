@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Ayuda Contra la Ansiedad</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* Estilos para la sección del juego de mandalas */
+            #colorPalette {
+                display: flex;
+                justify-content: center;
+                margin: 20px;
+            }
+            .colorOption {
+                width: 30px;
+                height: 30px;
+                margin: 0 5px;
+                cursor: pointer;
+            }
+            #mandalaCanvas {
+                border: 1px solid #fff5f5;
+                display: block;
+                margin: 0 auto;
+            }
+
+            /* Estilos para la sección de explicación */
+            .explicacion-section {
+                background-image: url('assets/img/montañas.jpg');
+                background-size: cover;
+                background-position: center;
+                color: rgb(255, 235, 235);
+                padding: 200px 0;
+
+            }
+            .explicacion-section h2, .explicacion-section p, .explicacion-section ul {
+                color: rgb(255, 238, 238);
+            }
+            .explicacion-section ul {
+                list-style-type: disc;
+                margin-left: 50px;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Grupo 2</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">Ejercicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Video</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#explicacion">Explicacion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#mandala">Mandala</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">RESPIRA</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Está todo bien, solo respira.</h2>
+                        <a class="btn btn-primary" href="#about">Click Aqui Para Calmar tu Ansiedad...</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container-fluid px-0">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/oeOXoK67ewE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+         <!-- Explicacion-->
+         <section class="explicacion-section" id="explicacion">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h1 class="text-white mb-4">¿Qué es la ansiedad?</h1>
+                        <p style="font-size: 24px;">La ansiedad es una respuesta natural del cuerpo al estrés. Es un sentimiento de miedo o aprensión por lo que está por venir. Puede ocurrir antes de tomar un examen, durante una entrevista de trabajo o en otras situaciones importantes. La ansiedad ocasional es normal, pero la ansiedad persistente puede afectar tu vida diaria.</p>
+                        <h2 class="text-white mb-4">Ejercicio para Calmar la Ansiedad</h2>
+                        <p style="font-size: 24px;">Una técnica simple para calmar la ansiedad es la respiración profunda:</p>
+                        <ul style="font-size: 24px;">
+                            <li>Siéntate en un lugar cómodo y cierra los ojos.</li>
+                            <li>Inhala profundamente por la nariz contando hasta cuatro.</li>
+                            <li>Mantén la respiración contando hasta cuatro.</li>
+                            <li>Exhala lentamente por la boca contando hasta cuatro.</li>
+                            <li>Repite este ciclo varias veces hasta que te sientas más tranquilo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+<!-- Mandala Section -->
+<section class="mandala-section text-center" id="mandala">
+    <div class="container px-4 px-lg-5">
+        <h2 class="mb-4">Colorea el Mandala</h2>
+ <div id="content">
+        <h1>Mandala Generator</h1>
+        <div id="colorPalette">
+            <!-- Paleta de colores generada dinámicamente por JavaScript -->
+        </div>
+        <canvas id="mandalaCanvas" width="500" height="500"></canvas>
+        <div>
+            <button id="mandala1Button">Mandala 1</button>
+            <button id="mandala2Button">Mandala 2</button>
+            <button id="mandala3Button">Mandala 3</button>
+            <button id="mandala4Button">Mandala 4</button>
+        </div>
+    </div>
+
+</section>
+
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/respirar.jpg" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Actividades diarias que ayudan a calmar y prevenir la ansiedad</h4>
+                            <p class="text-black-50 mb-0">
+                                Haz deporte,
+                                camina,
+                                disfruta de buena compañía,
+                                pasa tiempo con tu mascota,
+                                practica un hobby creativo o manual,
+                                clases de yoga,
+                                tiempo con la naturaleza,
+                            Trata de hacer almenos una de estas actividades diariamente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/playa.jpg" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Tú no eres tu ansiedad</h4>
+                                    <p class="mb-0 text-white-50">La ansiedad es una emoción pasajera, tú no estás definido por esta emoción y siempre puedes tomar acciones para poder manejar tu ansiedad y sentirte más cómoda o cómodo contigo misma/o.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/marazul4.jpeg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">La ansiedad es manejable.</h4>
+                                    <p class="mb-0 text-white-50">Aunque sientas a veces que eres consumida/o por esta emoción, debes saber que es una sensación tratable y que incluso puede ser usada a tu favor. La ansiedad a veces ese energía en exceso que puede ser canalizada en diferentes actividades como el ejercicio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Tranquilx! Solo toma otro respiro profundo...</h2>
+                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            </div>
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">PUCE &copy; Pucetec 2024</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <!-- Mandala Coloring Game Script -->
+        
+    </body>
+</html>
